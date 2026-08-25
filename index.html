@@ -308,6 +308,24 @@ nav.solid .nav-links a:hover{color:var(--blk);}
 .oc-list li{font-size:12px;color:#444;display:flex;align-items:flex-start;gap:10px;}
 .oc-list li::before{content:'';width:5px;height:5px;background:var(--red);border-radius:50%;flex-shrink:0;margin-top:6px;}
 
+/* ── ABOUT ── */
+.about{background:var(--white);padding:120px 64px;}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;max-width:1180px;margin:64px auto 0;align-items:center;}
+.about-photo{aspect-ratio:4/5;background:linear-gradient(160deg,#f7f6f4,#ececea);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.1);}
+.about-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,transparent 40%,rgba(208,27,27,.05) 100%);pointer-events:none;}
+.about-photo svg{stroke:#c4c4c0;position:relative;z-index:1;}
+.about-photo span{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#aaa;max-width:180px;line-height:1.7;position:relative;z-index:1;}
+.about-eyebrow{font-size:8.5px;letter-spacing:4.5px;text-transform:uppercase;font-weight:700;color:var(--red);margin-bottom:14px;}
+.about-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4.2vw,58px);color:var(--blk);letter-spacing:1px;line-height:.95;margin-bottom:24px;}
+.about-p{font-size:14px;color:#444;line-height:1.95;font-weight:300;margin-bottom:18px;}
+.about-p:last-of-type{margin-bottom:0;}
+.about-quote{border-left:3px solid var(--red);padding-left:24px;margin-top:30px;}
+.about-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--blk);line-height:1.7;}
+.about-stats{display:flex;gap:0;margin-top:36px;padding-top:28px;border-top:1px solid rgba(0,0,0,.07);}
+.about-stat{flex:1;padding-right:24px;}
+.about-stat-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--red);letter-spacing:.5px;line-height:1;}
+.about-stat-lbl{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-top:8px;font-weight:600;}
+
 /* ── PRICING ── */
 .pricing{background:var(--off);padding:120px 64px;}
 .price-grid{display:grid;grid-template-columns:1fr;gap:22px;max-width:900px;margin:64px auto 0;}
@@ -414,6 +432,7 @@ footer{background:#040404;padding:80px 64px 40px;}
   .testi-grid-wrap [style*="grid-row:span 2"]{grid-row:span 1!important;}
   nav,section,.cta-content,footer{padding-left:32px!important;padding-right:32px!important;}
   .svc-grid,.focus-grid,.certs-grid,.online-grid{grid-template-columns:1fr 1fr!important;}
+  .about-grid{grid-template-columns:1fr!important;}
   .ft-top{flex-direction:column;}
   .scrub-text-layer,.hero{padding-left:32px!important;padding-right:32px!important;}
 }
@@ -446,6 +465,7 @@ footer{background:#040404;padding:80px 64px 40px;}
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#certs">Credentials</a></li>
     <li><a href="#online">Online</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -540,6 +560,27 @@ footer{background:#040404;padding:80px 64px 40px;}
 </div><!-- /video-zone -->
 
 <!-- ══ FROM HERE DOWN: normal white page, no video ══ -->
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-photo rv-l"><img src="coach-zara.jpg" alt="Coach Zara" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    <div class="rv-r">
+      <div class="about-eyebrow">The Coach</div>
+      <h2 class="about-h">MEET COACH ZARA</h2>
+      <p class="about-p">I started coaching group classes and personal training back in 2020, and from day one I've tried to treat every client the way I'd want to be treated — with patience, honesty, and real attention to detail. Nothing about your program is generic; every session and every rep is coached with intention.</p>
+      <p class="about-p">The results my clients get are what prove I'm worth trusting — but that's never just me. It's teamwork. I'll always do my part, session after session, but you have to show up, stay consistent, and follow the nutrition it takes to get the results you actually want.</p>
+      <div class="about-quote">
+        <p>"I do my part. You bring the consistency. Together, that's what gets results."</p>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><div class="about-stat-num">2020</div><div class="about-stat-lbl">Coaching Since</div></div>
+        <div class="about-stat"><div class="about-stat-num">1-on-1</div><div class="about-stat-lbl">& Group Coaching</div></div>
+        <div class="about-stat"><div class="about-stat-num">100%</div><div class="about-stat-lbl">Detail-Focused</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
@@ -811,7 +852,7 @@ footer{background:#040404;padding:80px 64px 40px;}
     <div class="ft-top">
       <div><div class="ft-logo">COACH <span>ZARA</span></div><div class="ft-sub">Elite Training · Olympic Lifting · Online Coaching</div></div>
       <div class="ft-links">
-        <div class="ftc"><h5>Navigate</h5><ul><li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#certs">Credentials</a></li><li><a href="#online">Online</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="ftc"><h5>Navigate</h5><ul><li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li><li><a href="#certs">Credentials</a></li><li><a href="#online">Online</a></li><li><a href="#contact">Contact</a></li></ul></div>
         <div class="ftc"><h5>Services</h5><ul><li><a href="#services">1-on-1 Training</a></li><li><a href="#services">Olympic Lifting</a></li><li><a href="#services">Online Coaching</a></li><li><a href="#services">Programming</a></li><li><a href="#services">Fusion</a></li></ul></div>
         <div class="ftc"><h5>Contact</h5><ul><li><a href="mailto:coach.zara@outlook.com">coach.zara@outlook.com</a></li><li><a href="#trial">Free Trial</a></li></ul></div>
       </div>
