@@ -42,6 +42,11 @@ nav.solid .nav-links a{color:rgba(0,0,0,.5);}
 .nav-links a:hover{color:#fff;}
 nav.solid .nav-links a:hover{color:var(--blk);}
 .nav-links a:hover::after{transform:scaleX(1);}
+.nav-logo,.nav-links a,.nav-cta{white-space:nowrap;flex-shrink:0;}
+@media(max-width:1300px){.nav-links a{padding:0 9px;letter-spacing:1.5px;}.nav-links a::after{left:9px;right:9px;}}
+@media(max-width:1100px){.nav-links a{padding:0 6px;letter-spacing:1px;font-size:8.5px;}.nav-links a::after{left:6px;right:6px;}.nav-cta{padding:10px 16px;}}
+@media(max-width:1000px){.nav-cta{display:none;}}
+@media(max-width:860px){.nav-links{display:none;}.nav-cta{display:inline-block;}}
 .nav-cta{padding:10px 26px;background:var(--red);color:#fff;font-size:9px;letter-spacing:2.5px;font-weight:700;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .25s,transform .2s;}
 .nav-cta:hover{background:#ff2020;transform:translateY(-1px);}
 
@@ -421,6 +426,15 @@ footer{background:#040404;padding:80px 64px 40px;}
 .ft-tag2{text-align:center;margin-top:28px;}
 .ft-tag2 p{font-size:8px;letter-spacing:6px;text-transform:uppercase;color:rgba(208,27,27,.35);}
 
+/* homepage pricing overview (full tables live on each service page) */
+.price-links{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1240px;margin:64px auto 0;}
+.price-link{display:flex;flex-direction:column;background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:32px 26px;text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s,border-color .3s;}
+.price-link:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(0,0,0,.09);border-color:rgba(208,27,27,.15);}
+.pl-name{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--blk);line-height:1;}
+.pl-desc{font-size:12px;color:#888;font-weight:300;line-height:1.6;margin-top:10px;flex:1;}
+.pl-from{font-size:15px;font-weight:700;color:var(--red);margin-top:18px;}
+.pl-cta{font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--blk);margin-top:14px;}
+
 /* faq */
 .faq{background:var(--off);padding:120px 64px;}
 .faq-list{max-width:820px;margin:56px auto 0;border-top:1px solid rgba(0,0,0,.1);}
@@ -438,6 +452,7 @@ footer{background:#040404;padding:80px 64px 40px;}
   nav,section,.cta-content,footer{padding-left:32px!important;padding-right:32px!important;}
   .svc-grid,.focus-grid,.certs-grid,.online-grid{grid-template-columns:1fr 1fr!important;}
   .cert-list{grid-template-columns:1fr 1fr;}
+  .price-links{grid-template-columns:1fr 1fr;}
   .about-grid{grid-template-columns:1fr!important;}
   .ft-top{flex-direction:column;}
   .scrub-text-layer,.hero{padding-left:32px!important;padding-right:32px!important;}
@@ -449,6 +464,7 @@ footer{background:#040404;padding:80px 64px 40px;}
   .nav-links,.nav-cta{display:none!important;}
   .svc-grid,.focus-grid,.certs-grid,.online-grid{grid-template-columns:1fr!important;}
   .cert-list{grid-template-columns:1fr;}
+  .price-links{grid-template-columns:1fr;}
 }
 
 /* ══════════════════════════════════════════
